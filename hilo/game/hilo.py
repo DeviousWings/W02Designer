@@ -26,7 +26,6 @@ class Hilo:
         
         self.choice = input("Is the next card higher or lower? ")
         
-        print(f"The next card is {card}")
         
         if self.choice == "h" and card > card:
             print("It is higher")

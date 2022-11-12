@@ -60,6 +60,8 @@ class Director:
         for i in range(len(self.cards)):
             card = self.cards[i]
             card.draw()
+            
+        
 
 
     def do_outputs(self):

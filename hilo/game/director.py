@@ -1,6 +1,7 @@
+import random
+
 from game.hilo import Hilo
 
-import random
 
 class Director:
     """A person who directs the game. 

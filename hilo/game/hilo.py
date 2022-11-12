@@ -9,21 +9,18 @@ Play again? [y/n]
 class Hilo:
     
     def __init__(self):
-        self.cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+        self.cards = 0
+        self.score = 0
         
         
         
     def draw(self):
-        value = 1
-        for card in self.cards:
-            self.cards.append([card])
-        value = value + 1
+        self.cards = random.randint(1, 13)
+        self.points = self.cards + 1
         
-        random.shuffle(self.cards)
         score = 300
         card1 = self.cards
         
-        value = random.shuffle(self.cards)
         self.points = print(f"Your score is: {score}")
         print(f"The current card is {card1[0]}")
 

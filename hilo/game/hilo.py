@@ -22,7 +22,7 @@ class Hilo:
         card1 = self.cards
         
         self.points = print(f"Your score is: {score}")
-        print(f"The current card is {card1[0]}")
+        print(f"The current card is {card1}")
 
         card2 = self.cards
         print(f"Your score is: {score}")
@@ -30,15 +30,15 @@ class Hilo:
         self.choice = input("higher or lower? ")
         
         card2 = self.cards
-        print(f"The next card is {card2[0]}")
+        print(f"The next card is {card2}")
         
-        if self.choice == "h" and card2[1] > card1[1]:
+        if self.choice == "h" and card2 > card1:
             score += 100
-        elif self.choice =="l" and card2[1] < card1[1]:
+        elif self.choice =="l" and card2 < card1:
             score += 100
-        elif self.choice =="h" and card2[1] == card1[1]:
+        elif self.choice =="h" and card2 == card1:
             self.score += 0
-        elif self.choice =="l" and card2[1] == card1[1]:
+        elif self.choice =="l" and card2 == card1:
             score += 0
         else:
             score -= 75

@@ -15,34 +15,38 @@ class Hilo:
         
         
     def draw(self):
-        self.cards = random.randint(1, 13)
+        self.cards1 = random.randint(1, 13)
+        self.cards2 = random.randint(1, 13)
         self.points = self.cards + 1
         
         score = 300
-        card = self.cards
+        card1 = self.cards1
+        card2 = self.cards2
+        
         
         self.points = print(f"Your score is: {score}")
-        print(f"The current card is {card}")
+        print(f"The current card is {card1}")
         
         self.choice = input("Is the next card higher or lower? ")
         
+        print(f"The next card is {card2}")
         
-        if self.choice == "h" and card > card:
+        if self.choice == "h" and card1 > card2:
             print("It is higher")
-            print(f"Your score is: {score}")
             score += 100
-        elif self.choice =="l" and card < card:
+            print(f"Your score is: {score}")
+        elif self.choice =="l" and card1 < card2:
             print("It is lower")
-            print(f"Your score is: {score}")
             score += 100
-        elif self.choice =="h" and card == card:
+            print(f"Your score is: {score}")
+        elif self.choice =="h" and card1 == card2:
             print("It was lower.")
-            print(f"Your score is: {score}")
             self.score += -100
-        elif self.choice =="l" and card == card:
-            print("It was higher")
             print(f"Your score is: {score}")
+        elif self.choice =="l" and card1 == card2:
+            print("It was higher")
             score += -100
+            print(f"Your score is: {score}")
         else:
             score -= 75
-        card = card
+        card1 = card2

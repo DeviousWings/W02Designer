@@ -32,20 +32,20 @@ class Hilo:
         print(f"The next card is {card2}")
         
         if self.choice == "h" and card1 > card2:
-            print("It is higher")
-            score += 100
-            print(f"Your score is: {score}")
-        elif self.choice =="l" and card1 < card2:
             print("It is lower")
-            score += 100
+            score += -100
             print(f"Your score is: {score}")
-        elif self.choice =="h" and card1 == card2:
-            print("It was lower.")
-            self.score += -100
-            print(f"Your score is: {score}")
-        elif self.choice =="l" and card1 == card2:
+        elif self.choice == "l" and card1 < card2:
             print("It was higher")
             score += -100
+            print(f"Your score is: {score}")
+        elif self.choice == "h" and card1 < card2:
+            print("It is higher +100.")
+            self.score += 100
+            print(f"Your score is: {score}")
+        elif self.choice == "l" and card1 > card2:
+            print("It is lower +100")
+            score += 100
             print(f"Your score is: {score}")
         else:
             score -= 75
